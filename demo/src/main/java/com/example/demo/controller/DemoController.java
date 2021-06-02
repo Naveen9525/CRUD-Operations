@@ -27,15 +27,15 @@ public String post(@RequestBody Demo demo)
 }
 
 @PutMapping("/update/{id}")
-public String update(@PathVariable ("id") Demo demo,Long id)
+public String update(@PathVariable int id,@RequestBody Demo demo)
 {
 	return demoService.update(demo,id);
 }
 
 @DeleteMapping("/delete/{id}")
-public String delete(@PathVariable ("id") Demo demo,Long id)
+public String delete(@PathVariable long id)
 {
-	return demoService.delete(demo,id);
+	return demoService.delete(id);
 }
 
 @GetMapping("/get")

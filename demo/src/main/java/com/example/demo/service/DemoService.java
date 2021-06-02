@@ -7,7 +7,7 @@ import com.example.demo.model.Demo;
 public interface DemoService
 {
 String create(Demo demo);
-String update(Demo demo,Long id);
-String delete(Demo demo,Long id);
+String update(Demo demo,int id);
+String delete(long id);
 List<Demo> findAll();
 }

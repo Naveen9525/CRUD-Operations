@@ -22,14 +22,14 @@ public class DemoServiceImple implements DemoService
 	}
 
 	@Override
-	public String update(Demo demo,Long id) {
+	public String update(Demo demo,int id) {
 		demoRepository.save(demo);
 		return "Update Data Successfully";
 	}
 
 	@Override
-	public String delete(Demo demo, Long id) {
-		demoRepository.delete(demo);
+	public String delete(long id) {
+		demoRepository.deleteById(id);
 		return "Delete Success";
 	}
 	
