@@ -27,13 +27,13 @@ public String post(@RequestBody Demo demo)
 }
 
 @PutMapping("/update/{id}")
-public String update(@PathVariable int id,@RequestBody Demo demo)
+public String update(@PathVariable("id") int id,@RequestBody Demo demo)
 {
 	return demoService.update(demo,id);
 }
 
 @DeleteMapping("/delete/{id}")
-public String delete(@PathVariable long id)
+public String delete(@PathVariable("id") long id)
 {
 	return demoService.delete(id);
 }
@@ -43,4 +43,11 @@ public List<Demo> findAll()
 {
 	return demoService.findAll();
 }
+
+@GetMapping("/get/{id}")
+public Object findById(@PathVariable("id") long id)
+{
+	return demoService.findById(id);
+}
+
 }

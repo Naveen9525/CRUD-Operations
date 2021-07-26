@@ -37,4 +37,9 @@ public class DemoServiceImple implements DemoService
 	public List<Demo> findAll() {
 		return demoRepository.findAll();
 	}
+
+	@Override
+	public Object findById(long id) {
+		return demoRepository.findById(id);
+	}
 }

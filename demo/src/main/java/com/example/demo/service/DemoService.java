@@ -10,4 +10,5 @@ String create(Demo demo);
 String update(Demo demo,int id);
 String delete(long id);
 List<Demo> findAll();
+Object findById(long id);
 }
